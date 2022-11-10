@@ -46,7 +46,7 @@ export async function fileExtByContent(content: ArrayBuffer) {
 }
 
 function recreateImageTag(match: string, anchor: string, link: string) {
-  return `![${anchor}](${link})`;
+  return `![${anchor}](${encodeURI(link)})`;
 }
 
 export function cleanContent(content: string) {
